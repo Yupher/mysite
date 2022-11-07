@@ -1,38 +1,349 @@
-.App {
-  text-align: center;
+/*ui elements*/
+/*divider */
+.divider {
+  max-width: 100%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 5px;
+  margin: 5px 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*loading */
+.loading {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid black;
+  border-top-color: white;
+  border-bottom-color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: spin 1s cubic-bezier(0.55, -0.48, 0.5, 1.62) infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Header start */
+.header-section {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30vh;
+  padding: 20px 30px;
+  /* background-color: #010048; */
+  background-color: #000;
+  gap: 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60%;
+}
+.brand h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 4px;
+}
+
+.brand img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  transform: translateY(12%);
+}
+
+.brand small {
+  color: white;
+  margin-left: 15px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials li {
+  list-style: none;
+  padding-left: 15px;
+}
+.socials a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+  font-size: 1.75rem;
+  opacity: 1;
+  transition: 0.5s linear all;
+}
+
+.socials a:hover {
+  opacity: 0.7;
+}
+/* header end */
+
+/*about me start */
+
+.about-me {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  max-width: 100%;
+}
+
+.about-me-title {
+  max-width: 100%;
+}
+.about-me-title h1 {
+  font-size: 3rem;
+  font-weight: 400;
+
+  margin-bottom: 2px;
+}
+.about-me-paragraph {
+  margin-top: 10px;
+  padding: 5px 20px;
+  line-height: 1.5;
+}
+.about-me-paragraph p {
+  font-size: 18px;
+  font-weight: 400;
+}
+/*about me end*/
+
+/*experties start */
+.experties {
+  margin: 50px 20px;
+  max-width: 100%;
+}
+
+.experties-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.experties-content {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.experties-content h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.experties-content li {
+  list-style: none;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.experties-network {
+  width: 40%;
+}
+
+.experties-dev {
+  width: 40%;
+}
+/* experties ends */
+
+/* github*/
+
+.repos {
+  margin: 50px 20px;
+  max-width: 100%;
+}
+
+.repos-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+.repo-card {
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgb(231, 231, 231);
+}
+.repo-card a {
+  text-decoration: none;
+  outline: none;
+  color: #000;
+  opacity: 1;
+  transition: 0.7s linear all;
+}
+.repo-card a:hover {
+  opacity: 0.7;
+}
+
+.repo-card h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.repo-card p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/*github ends*/
+
+/*contact me*/
+.contact-me {
+  margin: 50px 20px;
+  max-width: 100%;
+}
+
+.contact-me-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.contact-me-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.contact-me-input {
+  width: 100%;
+  max-width: 100%;
+  margin: 5px;
+  padding: 5px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+textarea {
+  height: 70px;
+  grid-column: 1 / 3;
+}
+.contact-me-submit {
+  padding: 15px;
+  margin: 5px;
+  background-color: #000;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 120px;
+  height: 70;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: 0.5s all ease-in;
+}
+
+.contact-me-submit:hover {
+  opacity: 0.8;
+  transform: scale(0.9, 0.9);
+}
+
+@media only screen and (max-width: 1200px) {
+  .brand h1,
+  .about-me-title h1,
+  .experties-title,
+  .repos-title,
+  .contact-me-title {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 1059px) {
+  .brand h1,
+  .about-me-title h1,
+  .experties-title,
+  .repos-title,
+  .contact-me-title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 951px) {
+  .brand h1,
+  .about-me-title h1,
+  .experties-title,
+  .repos-title,
+  .contact-me-title {
+    font-size: 1.7rem;
+  }
+  .experties-content h3,
+  .repo-card h3 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 887px) {
+  .brand img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 887px) {
+  .brand img {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .brand {
+    max-width: 70%;
+  }
+  .brand img {
+    width: 150px;
+    height: 150px;
+    transform: translateY(0%);
+  }
+  .socials a {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .header-section {
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .brand {
+    max-width: 100%;
+  }
+  .brand h1,
+  .about-me-title h1,
+  .experties-title,
+  .repos-title,
+  .contact-me-title {
+    font-size: 2rem;
+  }
+  .socials {
+    width: 100%;
   }
 }
